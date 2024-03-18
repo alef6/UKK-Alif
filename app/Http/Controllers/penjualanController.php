@@ -76,7 +76,12 @@ class penjualanController extends Controller
             
             return redirect()->back();
         }
-        
+        function cancel(request $request,$id){
+            echo $id;
+            $deleted = DB::table('penjualan')->where('penjualan_id', $id)->delete();
+            if ($deleted) {
+                return redirect('/penjualan');
+            }}
     }
         
         function data_penjualan(){
@@ -105,6 +110,7 @@ class penjualanController extends Controller
         
         return redirect()->back();
     }
+    
 
      function detail(Request $request ,$id){
         $detail = DB::table('detail_penjualan')
@@ -115,5 +121,8 @@ class penjualanController extends Controller
 
         return view('detail-penjualan',['detail'=> $detail]);
     }
+
     }
+
+
 

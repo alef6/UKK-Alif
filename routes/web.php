@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [authenticationController::class, 'home'])->name('home');
     Route::get('/logout', [authenticationController::class, 'logout']);
     
-    Route::get('/dashboard', [authenticationController::class, 'dashboard']);
+    
 
     Route::post('/tambah_produk', [produkController::class, 'proses_tambah_produk']);
     Route::get('/tambah_produk', [produkController::class, 'tambah_produk']);
@@ -52,5 +52,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/penjualan', [penjualanController::class, 'data_penjualan']);
     Route::post('/checkout', [penjualanController::class, 'checkout']);
     Route::get('/detail-penjualan/{id}',[penjualanController::class,'detail']);
-    Route ::get('/cancel-produk/{id}', [penjualanController::class,'cancel']);
+    Route ::get('/cancel-penjualan/{id}', [penjualanController::class,'cancel']);
 });

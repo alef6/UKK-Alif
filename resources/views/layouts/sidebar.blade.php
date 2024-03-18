@@ -24,11 +24,7 @@
         <a href="#">K A S I R</a>
       </header>
       <ul class="nav">
-      <li>
-          <a href="{{ url('dashboard') }}">
-            <i class="zmdi zmdi-view-dashboard"></i> Dashboard
-          </a>
-        </li>
+      
         <li>
           <a href="{{ url('home') }}">
             <i class="zmdi zmdi-view-dashboard"></i> Data Produk
