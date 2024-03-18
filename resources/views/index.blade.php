@@ -84,7 +84,7 @@
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: green;
         }
     </style>
 </head>
